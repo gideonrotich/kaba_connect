@@ -59,6 +59,41 @@ class CommentsActivity : AppCompatActivity() {
             else
             {
                 addComment()
+
+
+
+                val postRef = FirebaseDatabase.getInstance().reference.child("Posts").child(postId!!).child("postimage")
+
+                postRef.addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(p0: DataSnapshot) {
+
+                        if (p0.exists())
+                        {
+                            val image = p0.value.toString()
+
+
+                            val notRef = FirebaseDatabase.getInstance().reference.child("Notifications").child(publisherId)
+
+                            val commentsMap = HashMap<String, Any>()
+                            commentsMap["notification"] = "commented on your post"
+                            commentsMap["publisher"] = firebaseUser!!.uid
+                            commentsMap["image"] = image
+                            notRef.push().setValue(commentsMap)
+
+
+                        }
+                        else{
+                            post_image_comment.visibility = View.GONE
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        TODO("Not yet implemented")
+                    }
+                })
+
+
+
             }
         })
 

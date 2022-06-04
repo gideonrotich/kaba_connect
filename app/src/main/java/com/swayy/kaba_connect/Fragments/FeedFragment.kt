@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.androidnetworking.AndroidNetworking
+import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.ParsedRequestListener
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -115,15 +118,16 @@ class FeedFragment : Fragment() {
 //            }
 //        })
 
-
+        setupAPICall()
         userinfo()
 
 
-        view.swipe_mimi.post(Runnable {
-            view.swipe_mimi.isRefreshing=true
-            retrievePosts()
-            retrieveUsers()
-        })
+
+//        view.swipe_mimi.post(Runnable {
+//            view.swipe_mimi.isRefreshing=true
+//            retrievePosts()
+//            retrieveUsers()
+//        })
 
         view.swipe_mimi.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
             postAdapter!!.clear()
@@ -133,11 +137,38 @@ class FeedFragment : Fragment() {
             //loadin
             retrievePosts()
             retrieveUsers()
+            view?.recycler_view_posta?.visibility = View.VISIBLE
+            view?.recycler_view_feed?.visibility = View.VISIBLE
+//            setupAPICall()
         })
 
 
 
         return view
+    }
+
+    private fun setupAPICall() {
+        AndroidNetworking.initialize(context)
+        AndroidNetworking.get("https://5e510330f2c0d300147c034c.mockapi.io/users")
+            .build()
+            .getAsObjectList(Post::class.java, object : ParsedRequestListener<List<Post>> {
+                override fun onResponse(posts: List<Post>) {
+                    view?.shimmerFrameLayout?.stopShimmer()
+                    view?.shimmerFrameLayout?.visibility = View.GONE
+
+                    retrievePosts()
+                    retrieveUsers()
+
+                    view?.recycler_view_posta?.visibility = View.VISIBLE
+                    view?.recycler_view_feed?.visibility = View.VISIBLE
+                }
+
+                override fun onError(anError: ANError) {
+                    view?.shimmerFrameLayout?.visibility = View.GONE
+                    view?.recycler_view_posta?.visibility = View.GONE
+                    view?.recycler_view_feed?.visibility = View.VISIBLE
+                }
+            })
     }
 
     private fun userinfo() {
@@ -182,6 +213,8 @@ class FeedFragment : Fragment() {
                     {
                         itemList!!.add(post)
                         view!!.swipe_mimi.isRefreshing=false
+                        view!!.foradz.visibility = View.VISIBLE
+                        view!!.foradff.visibility = View.VISIBLE
 
                     }
                     itemAdapter!!.notifyDataSetChanged()
@@ -209,6 +242,8 @@ class FeedFragment : Fragment() {
                     {
                         postList!!.add(post)
                         view!!.swipe_mimi.isRefreshing=false
+                        view!!.foradz.visibility = View.VISIBLE
+                        view!!.foradff.visibility = View.VISIBLE
 
                     }
                     postAdapter!!.notifyDataSetChanged()
@@ -219,5 +254,17 @@ class FeedFragment : Fragment() {
 
             }
         })
+    }
+
+
+
+
+//    override fun onResume() {
+//        super.onResume()
+//        shimmerFrameLayout.startShimmer()
+//    }
+    override fun onPause() {
+        view?.shimmerFrameLayout?.stopShimmer()
+        super.onPause()
     }
 }

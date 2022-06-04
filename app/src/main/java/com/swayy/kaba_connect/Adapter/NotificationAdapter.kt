@@ -49,6 +49,14 @@ class NotificationAdapter(private val mContext: Context,
         {
             holder.userNameTV.visibility = View.GONE
         }
+        if (comment.getNotification() == "commented on your post")
+        {
+            Picasso.get().load(comment.getImage()).into(holder.maji)
+
+        }
+        else if(comment.getImage() != ""){
+            holder.commentTV.text = comment.getNotification()
+        }
         getUserInfo(holder.imageProfile, holder.userNameTV, comment.getPublisher())
 
         holder.imageProfile.setOnClickListener {

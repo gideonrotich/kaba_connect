@@ -33,10 +33,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
             android:layout_marginRight="20dp"
-            android:text="Sadio"
-            android:textStyle="bold"
+            android:text=""
             android:textColor="@color/black"
-            android:textSize="17sp">
+            android:textSize="17sp"
+            android:textStyle="bold">
 
         </TextView>
 
@@ -48,7 +48,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:text="Computer Science"
+            android:text=""
             android:textSize="14sp">
 
         </TextView>
@@ -114,7 +114,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:src="@drawable/ic_baseline_message_24"
+            android:src="@drawable/ic_sendone"
             android:tint="@color/black">
 
         </ImageView>
@@ -122,50 +122,77 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/forad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rel_two"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Someone familiar"
-        android:textColor="#2B2A2A"
-        android:textSize="16sp"
-        android:textStyle="bold">
+           <TextView
+               android:id="@+id/foradz"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/rel_two"
+               android:layout_marginLeft="16dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:visibility="gone"
+               android:text="Someone familiar"
+               android:textColor="#2B2A2A"
+               android:textSize="16sp"
+               android:textStyle="bold">
 
-    </TextView>
+           </TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_feed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/forad"
+        android:layout_below="@+id/foradz"
         android:visibility="visible">
 
     </androidx.recyclerview.widget.RecyclerView>
-    <TextView
-        android:id="@+id/foradf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recycler_view_feed"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:text="Posts"
-        android:textColor="#2B2A2A"
-        android:textSize="16sp"
-        android:textStyle="bold">
 
-    </TextView>
+           <TextView
+               android:id="@+id/foradff"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/recycler_view_feed"
+               android:layout_marginLeft="16dp"
+               android:layout_marginTop="10dp"
+               android:text="Posts"
+               android:visibility="gone"
+               android:textColor="#2B2A2A"
+               android:textSize="16sp"
+               android:textStyle="bold">
+
+           </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_posta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/foradf"
-        android:visibility="visible">
+        android:layout_below="@+id/foradff"
+        android:visibility="gone">
 
     </androidx.recyclerview.widget.RecyclerView>
+           <com.facebook.shimmer.ShimmerFrameLayout
+               android:id="@+id/shimmerFrameLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/rel_two"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center"
+               android:layout_marginBottom="59dp"
+               android:orientation="vertical"
+               android:visibility="visible">
+
+               <!-- Adding 15 rows of placeholders -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <include layout="@layout/shimmer_placeholder_layout" />
+
+
+
+
+               </LinearLayout>
+           </com.facebook.shimmer.ShimmerFrameLayout>
        </RelativeLayout>
    </ScrollView>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

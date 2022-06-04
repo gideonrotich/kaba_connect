@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -16,6 +17,9 @@ import com.google.firebase.database.ValueEventListener
 import com.swayy.kaba_connect.Adapter.NotificationAdapter
 import com.swayy.kaba_connect.R
 import com.swayy.kaba_connect.model.Notification
+import com.swayy.kaba_connect.model.User
+import kotlinx.android.synthetic.main.fragment_discover.*
+import kotlinx.android.synthetic.main.fragment_notification.*
 
 
 class notificationFragment : Fragment() {
@@ -42,6 +46,31 @@ class notificationFragment : Fragment() {
         mNotification = ArrayList()
         notificationAdapter = context?.let { NotificationAdapter(it, mNotification) }
         recyclerView.adapter = notificationAdapter
+
+
+            val jobsRef = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.uid)
+
+            jobsRef.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+
+                    if (p0.exists())
+                    {
+                        val user = p0.getValue<User>(User::class.java)
+
+                        Glide.with(context!!)  //2
+                            .load(user!!.getImage()) //3
+                            .centerCrop() //4
+                            .into(optv)
+
+
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+
 
 
         val commentsRef = FirebaseDatabase.getInstance().reference.child("Notifications").child(firebaseUser.uid)
