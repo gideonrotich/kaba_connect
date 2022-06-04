@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.FeedFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/rel_one">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Kaba Connect"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/user_name_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="20dp"
+            android:text="Sadio"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="17sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/user_name_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name_feed"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Computer Science"
+            android:textSize="14sp">
+
+        </TextView>
+
+    </RelativeLayout>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:layout_width="wrap_content"
+    android:layout_below="@id/rel_one"
+    android:id="@+id/swipe.mimi"
+    android:layout_height="wrap_content">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:scrollbars="none"
+       android:layout_below="@id/rel_one">
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_two"
+        android:layout_below="@id/rel_one">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circ_one"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/placeholderthree">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/what"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="18dp"
+            android:layout_toLeftOf="@id/whatif"
+            android:layout_toRightOf="@id/circ_one"
+            android:background="@drawable/ic_maone"
+            android:backgroundTint="#F2F3F3"
+            android:text="Hi,whats on your mind?"
+            android:textAllCaps="false"
+            android:textColor="#6C6C6C"
+            android:textSize="12sp"
+            app:backgroundTint="@color/shimmer"
+            app:cornerRadius="50dp">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+        <ImageView
+            android:id="@+id/whatif"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_baseline_message_24"
+            android:tint="@color/black">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/forad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_two"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Someone familiar"
+        android:textColor="#2B2A2A"
+        android:textSize="16sp"
+        android:textStyle="bold">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forad"
+        android:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/foradf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler_view_feed"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Posts"
+        android:textColor="#2B2A2A"
+        android:textSize="16sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_posta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foradf"
+        android:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+       </RelativeLayout>
+   </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

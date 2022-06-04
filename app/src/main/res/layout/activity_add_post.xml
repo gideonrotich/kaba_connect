@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".AddPostActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar_post"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:layout_centerVertical="true"
+                android:tint="#838383"
+                android:id="@+id/can">
+
+            </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/can"
+                    android:layout_centerVertical="true"
+                    android:text="Share post"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"></TextView>
+
+                <TextView
+                    android:id="@+id/save_new_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:text="Post"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp"></TextView>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar_post"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_log_in_cover"
+            android:hint="What do you want to talk about?"
+            android:padding="20dp"
+            android:textColor="#7A7A7A"
+            android:textColorHint="#4C4C4C">
+
+        </EditText>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ongeza"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Add Image"
+            android:textColor="#7A7A7A"
+            android:textSize="16sp"></TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_image_24"
+                android:layout_marginLeft="6dp"
+                android:tint="#8C8B8B">
+
+            </ImageView>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/image_post"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
+        </ImageView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

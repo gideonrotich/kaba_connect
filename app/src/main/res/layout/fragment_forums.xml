@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.forumsFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profoda"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:src="@drawable/placeholderthree">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="14sp"
+            app:cornerRadius="2dp" />
+
+        <ImageView
+            android:id="@+id/not"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notification"
+            app:tint="@color/white">
+
+        </ImageView>
+
+    </LinearLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/swipe.primary"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btncreate"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Create forum"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp" />
+    <View
+        android:id="@+id/lainicomment"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btncreate"
+
+        android:layout_marginTop="10dp"
+
+        android:background="#EAE9E9">
+
+    </View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_forum"
+        android:visibility="visible"
+        android:layout_below="@+id/lainicomment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

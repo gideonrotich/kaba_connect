@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_height="wrap_content"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image_comment"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/twoo">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="6dp"
+        >
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/pichayako"
+            android:layout_marginLeft="1dp"
+            android:text="username"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:id="@+id/user_name_comment"
+
+            android:layout_toRightOf="@+id/pichayako">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/pichayako"
+            android:layout_marginLeft="1dp"
+            android:text="comment text"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/comment_comment"
+
+            android:layout_toRightOf="@+id/pichayako">
+
+        </TextView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Registration.SigninActivity">
+
+    <ImageView
+        android:id="@+id/man"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:tint="@color/black">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/welcome_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/welcome_t">
+
+        <TextView
+            android:id="@+id/text_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Please sign in to proceed"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/AppTheme.InputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_one"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="16dp"
+            android:hint="Student email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmaill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/AppTheme.InputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilEmail"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:hint="Password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_one_remforgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilPassword"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:text="Forgot password?"
+            android:textColor="@color/purple_500"
+            android:textSize="14sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/text_one_remforgot"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_remathree"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="6dp" />
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSignIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:layout_marginBottom="12dp"
+            android:text="or"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loggoogle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/or"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_remaone"
+            android:text="Continue with google"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logfacebook"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/loggoogle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_rematwo"
+            android:backgroundTint="#6D7FBD"
+            android:text="Continue with facebook"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="#304387"
+            app:cornerRadius="6dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp">
+
+
+            <TextView
+                android:id="@+id/text_one_dont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:text="Need an Email account?"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/text_one_donttwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/text_one_dont"
+                android:text="Create here"
+                android:textColor="#3B5998"
+                android:textSize="16sp">
+
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

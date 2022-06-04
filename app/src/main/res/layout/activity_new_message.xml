@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".NewMessageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/yes"
+        android:elevation="4dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/white">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select User"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="80dp"
+            android:textSize="16sp"
+            android:layout_centerInParent="true">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_tafuta"
+            android:layout_marginRight="46dp"
+            android:layout_marginTop="10dp"
+            app:tint="@android:color/black">
+
+        </ImageView>
+
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@android:color/white">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_newmessage"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/yes">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

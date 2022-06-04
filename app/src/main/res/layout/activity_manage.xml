@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings.manageActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/mbappe"
+        android:elevation="2dp"
+        android:background="#ffffff">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/yes"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/opt"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="14dp"
+                    android:tint="#000000"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="#000000"
+                    >
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage my account"
+                    android:layout_toRightOf="@id/opt"
+                    android:layout_marginLeft="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mbappe"
+        android:id="@+id/depay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:background="#ffffff"
+            android:elevation="4dp"
+            android:id="@+id/lambo"
+            android:layout_marginLeft="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete account"
+                android:layout_marginTop="20dp"
+
+                android:id="@+id/mbp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp">
+
+            </TextView>
+            <View
+                android:id="@+id/view33"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha=".1"
+                android:background="#000"
+                android:layout_below="@+id/mbp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view33"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="20dp"
+                android:text="Account deactivation means to delete your account: you will not be able to log in to your profile any more,and all your account history will be removed without the possibility to restore">
+
+            </TextView>
+        </RelativeLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btntoad"
+            android:backgroundTint="@color/purple_500"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textAllCaps="false"
+            android:layout_below="@+id/lambo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:text="Delete my account" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

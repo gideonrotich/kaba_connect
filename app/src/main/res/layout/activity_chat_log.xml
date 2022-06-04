@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ChatLogActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/yes"
+        android:elevation="4dp"
+        android:background="@color/white">
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:id="@+id/backk"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/white">
+
+        </ImageView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_marginTop="6dp"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/backk"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/prof_image"
+            android:src="@drawable/twoo">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fullname"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/prof_image"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/fullname_chat_log"
+            android:textColor="@android:color/black">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:layout_below="@id/fullname_chat_log"
+            android:layout_toEndOf="@+id/prof_image"
+            android:layout_marginLeft="6dp"
+            android:id="@+id/profession_chat"
+            android:textColor="@android:color/black">
+
+        </TextView>
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="@android:color/white">
+
+        </ImageView>
+
+
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerview_chat_log"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/yes"
+        android:layout_above="@+id/entermessage"
+        android:layout_marginBottom="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/entermessage"
+        android:background="@color/purple_500"
+        android:layout_alignParentBottom="true"
+
+        android:elevation="4dp">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Message"
+            android:maxLines="1"
+            android:id="@+id/edittext_chat_log"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_rectangle_loginbtn"
+            android:layout_gravity="center"
+            android:textColorHint="@android:color/black"
+            android:paddingLeft="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            >
+
+        </EditText>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:text="  Send"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:id="@+id/send_button_chat_log"
+            android:background="@drawable/button_background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

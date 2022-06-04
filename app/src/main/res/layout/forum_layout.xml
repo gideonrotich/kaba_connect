@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fora"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/placeholderfour">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/faraname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#373737"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/fora"
+        android:text="Forum name">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fora"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:id="@+id/faranametwo"
+        android:layout_below="@id/faraname"
+        android:layout_marginTop="3dp"
+        android:text="Forum description">
+
+    </TextView>
+    <View
+        android:id="@+id/lainicomment"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fora"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="10dp"
+
+        android:background="#EAE9E9">
+
+    </View>
+</RelativeLayout>

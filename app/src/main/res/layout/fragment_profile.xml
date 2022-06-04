@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.profileFragment">
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/app_bar">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:id="@+id/mbappe"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent"
+                android:id="@+id/yes">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar">
+
+        <RelativeLayout
+            android:id="@+id/set_ings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/num_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/set_ings"
+            android:background="#F3F3F3"
+
+            >
+
+            <TextView
+                android:id="@+id/acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:text="MY ACCOUNT"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/leeds"
+                android:layout_width="match_parent"
+                android:layout_height="216dp"
+                android:layout_below="@id/acc"
+                android:layout_marginLeft="10dp"
+                android:elevation="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_profile_cover">
+
+
+                <RelativeLayout
+                    android:id="@+id/march"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/auba"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_notification">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/smith"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/auba"
+                        android:text="Notifications"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/neymarbarca"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/april"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/march"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/carasco"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_feedback">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/dimaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/carasco"
+                        android:text="Feedback"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/neymarpsg"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/may"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/april"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/pogba"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_profile">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/bruno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/pogba"
+                        android:text="Manage my account"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/neymarmanu"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/june"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/may"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/willian"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_saved">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/saka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/willian"
+                        android:text="Privacy policy"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/neymarchelsea"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/accna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/leeds"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:text="MY SETTINGS"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/marqa"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/accna"
+                android:layout_marginLeft="10dp"
+                android:elevation="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_privacy_cover">
+
+                <RelativeLayout
+                    android:id="@+id/ndakugundar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/ronaldofreex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Edit profile"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/messibarcafreex"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ndakugunda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ndakugundar"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/ronaldofree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Settings"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/messibarcafree"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ndakugundasong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ndakugunda"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/ronaldofreeme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Terms and Conditions"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/messibarcafreeme"
+                        android:layout_width="24dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                        android:tint="#000000">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignudp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/marqa"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/purple_500"
+                android:text="Log out"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    </RelativeLayout>

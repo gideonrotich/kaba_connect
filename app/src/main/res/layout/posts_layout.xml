@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EFEFEF"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+              android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+
+
+            app:cardBackgroundColor="@android:color/white">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pichayako"
+                    android:layout_width="34dp"
+                    android:padding="0dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="11dp"
+                    android:src="@drawable/placeholderfive">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/pichayako"
+                android:layout_marginLeft="3dp"
+                android:text=""
+                android:textColor="#575656"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:id="@+id/fullname_post"
+
+                android:layout_toRightOf="@+id/pichayako">
+
+            </TextView>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/verifyone"
+                    android:layout_marginLeft="1dp"
+                    android:layout_toEndOf="@+id/fullname_post"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/verification"
+                    android:visibility="gone"
+
+                    android:layout_toRightOf="@+id/fullname_post"
+                    >
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/verification"
+                    android:layout_marginLeft="1dp"
+                    android:text=""
+                    android:visibility="visible"
+                    android:textColor="#818080"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/fullname_posta"
+
+                    android:layout_toRightOf="@+id/pichayako">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/menusheet"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="2dp"
+                        android:src="@drawable/menutwo"
+                        android:tint="#807E7E">
+
+                    </ImageView>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/proffesion_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fullname_post"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/pichayako"
+                    android:layout_toRightOf="@+id/pichayako"
+                    android:text=""
+                    android:textColor="#393838"
+                    android:textSize="13sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pichayako"
+                    android:layout_marginLeft="14dp"
+                    android:id="@+id/text_post"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15sp"
+                    android:textColor="#454545"
+                    android:text="">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/picture_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/text_post"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/placeholderfour"
+                    android:scaleType="fitXY">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_post"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_toEndOf="@id/pichalike"
+                    android:layout_toRightOf="@id/pichalike"
+                    android:text="like"
+                    android:textColor="#494848">
+
+                </TextView>
+
+
+                <ImageView
+                    android:id="@+id/pichalike"
+                    android:layout_width="20dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/picture_post"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/ic_mimi_like"
+                    >
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/pichacomment"
+                    android:layout_width="20dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/picture_post"
+                    android:layout_marginLeft="60dp"
+                    android:tint="#494848"
+                    android:layout_marginTop="14dp"
+                    android:layout_toEndOf="@+id/likes"
+                    android:layout_toRightOf="@+id/likes"
+                    android:backgroundTint="@android:color/black"
+                    android:src="@drawable/ic_comment">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_post"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/pichacomment"
+                    android:layout_toRightOf="@id/pichacomment"
+                    android:text="Comment"
+                    android:textColor="#494848">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/pichashare"
+                    android:layout_width="20dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/picture_post"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_toEndOf="@id/textcomment"
+                    android:layout_toRightOf="@id/textcomment"
+                    android:src="@drawable/ic_djone"
+                    android:tint="#494848">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_post"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_toEndOf="@id/pichashare"
+                    android:layout_toRightOf="@id/pichashare"
+                    android:text="Share"
+                    android:textColor="#494848">
+
+                </TextView>
+
+                <View
+                    android:id="@+id/lainicomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/totalcomments"
+
+                    android:layout_marginTop="2dp"
+
+                    android:background="#EAE9E9">
+
+                </View>
+
+                <TextView
+                    android:id="@+id/totalcomments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textshare"
+                    android:layout_marginLeft="2dp"
+                    android:padding="8dp"
+                    android:text="Be the first to comment on this"
+                    android:textColor="#494848">
+
+                </TextView>
+
+
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

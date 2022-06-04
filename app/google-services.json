@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "989568021006",
+    "project_id": "kaba-73753",
+    "storage_bucket": "kaba-73753.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989568021006:android:048f9ae5dc53cc6c48425f",
+        "android_client_info": {
+          "package_name": "com.swayy.kaba_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989568021006-07kboc67gtm83789qn4votfdh222rt36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8s_g0AyHbk3qxDeBdSoNqYc1naK148sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989568021006-07kboc67gtm83789qn4votfdh222rt36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

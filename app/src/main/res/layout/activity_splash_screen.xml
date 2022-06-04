@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Registration.Splash_screen_Activity">
+
+    <ImageView
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/my_icon">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/intomore"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Hello \nWelcome back,"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/intomore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/log"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:text="We are glad you are here.Please choose sign in \n method to proceed.">
+
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_remathree"
+        android:text="Email"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="6dp" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/log"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="or"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loggoogle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/or"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_remaone"
+        android:text="Continue with google"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        app:cornerRadius="6dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logfacebook"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/loggoogle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_rematwo"
+        android:backgroundTint="#3B5998"
+        android:text="Continue with facebook"
+        android:textAllCaps="false"
+        app:backgroundTint="#304387"
+        app:cornerRadius="6dp" />
+
+</RelativeLayout>

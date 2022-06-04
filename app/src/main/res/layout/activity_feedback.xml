@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings.feedbackActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/mbappe"
+        android:elevation="2dp"
+        android:background="#ffffff">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/yes"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/opt"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="14dp"
+                    android:tint="#000000"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="#000000"
+                    >
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback"
+                    android:layout_toRightOf="@id/opt"
+                    android:layout_marginLeft="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailfeed"
+        style="@style/AppTheme.InputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mbappe"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Your feedback">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailfeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailfood"
+        style="@style/AppTheme.InputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/tilEmailfeed"
+        android:layout_marginRight="16dp"
+        android:hint="Email Address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailfood"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInfacebookfood"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/tilEmailfood"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Send feedback"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="48dp"
+        android:layout_height="66dp"
+        android:src="@drawable/twoo"
+        android:id="@+id/imageview_chat_from_row"
+        android:layout_marginLeft="20dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is my message"
+        android:padding="2dp"
+        android:maxWidth="240dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_toEndOf="@id/imageview_chat_from_row"
+        android:id="@+id/textview_from_row"
+        android:layout_marginTop="21sp"
+        android:layout_marginLeft="12dp"
+        >
+
+    </TextView>
+
+
+</RelativeLayout>
