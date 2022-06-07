@@ -58,7 +58,7 @@ class ChatLogActivity : AppCompatActivity() {
         listenForMessages()
 
         send_button_chat_log.setOnClickListener {
-            Log.d(TAG,"Attemp to send message..")
+            Log.d(TAG,"Attempt to send message..")
             performSendMessage()
         }
 
@@ -146,10 +146,10 @@ class ChatFromItem(val text: String,val userr: Userr): Item<ViewHolder>(){
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.textview_from_row.text = text
 
-//        val uri = userr.image
-//        val targetImageView = viewHolder.itemView.imageview_chat_from_row
-//
-//        Picasso.get().load(uri).into(targetImageView)
+        val uri = userr.image
+        val targetImageView = viewHolder.itemView.imageview_chat_from_row
+
+        Picasso.get().load(uri).into(targetImageView)
     }
     override fun getLayout(): Int {
         return R.layout.chat_from_row
@@ -159,10 +159,10 @@ class ChatFromItem(val text: String,val userr: Userr): Item<ViewHolder>(){
 class ChatToItem(val text: String, val userr: Userr): Item<ViewHolder>(){
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.textview_to_row.text = text
-//        val uri = userr.image
-//        val targetImageView = viewHolder.itemView.imageview_chat_to_row
-//
-//        Picasso.get().load(uri).into(targetImageView)
+        val uri = userr.image
+        val targetImageView = viewHolder.itemView.imageview_chat_to_row
+
+        Picasso.get().load(uri).into(targetImageView)
     }
     override fun getLayout(): Int {
         return R.layout.chat_to_row

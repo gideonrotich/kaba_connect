@@ -28,6 +28,7 @@
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_not.xml" value="0.4" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_note.xml" value="0.25" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_searchforum.xml" value="0.4" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_settings.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_signin.xml" value="0.31587057010785824" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/activity_signup.xml" value="0.264" />
@@ -43,7 +44,7 @@
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/forum_item_layout.xml" value="0.4" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/forum_layout.xml" value="0.264" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/fragment_dashboard.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/fragment_discover.xml" value="0.2" />
+        <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/fragment_discover.xml" value="0.34488734835355284" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/fragment_feed.xml" value="0.2" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/fragment_forums.xml" value="0.2" />
         <entry key="..\:/Users/Giddy/AndroidStudioProjects/kaba_connect/app/src/main/res/layout/fragment_home.xml" value="0.2" />

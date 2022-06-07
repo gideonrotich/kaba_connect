@@ -18,8 +18,11 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_latest_messages.*
+import kotlinx.android.synthetic.main.activity_new_message.*
 import kotlinx.android.synthetic.main.latest_message_row.view.*
-
+/**
+ * Code written by Gideon Rotich
+ */
 class LatestMessagesActivity : AppCompatActivity() {
 
     companion object {
@@ -30,6 +33,10 @@ class LatestMessagesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_messages)
+
+        boli.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
 
         recyclerview_latest_messages.adapter = adapter
 //        recyclerview_latest_messages.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))

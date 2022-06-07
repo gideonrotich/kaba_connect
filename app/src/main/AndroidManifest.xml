@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kaba_connect">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Search.searchforumActivity"
+            android:exported="false" />
+        <activity
             android:name=".Registration.forgotActivity"
             android:exported="false" />
         <activity

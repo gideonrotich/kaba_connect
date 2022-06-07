@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -15,13 +16,16 @@ import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
 import com.swayy.kaba_connect.Adapter.CommentsAdapter
 import com.swayy.kaba_connect.Adapter.FaraAdapter
+import com.swayy.kaba_connect.Fragments.discoverFragment
 import com.swayy.kaba_connect.model.Comment
 import com.swayy.kaba_connect.model.Fara
 import com.swayy.kaba_connect.model.User
 import kotlinx.android.synthetic.main.activity_comments.*
 import kotlinx.android.synthetic.main.activity_comments.add_comment
 import kotlinx.android.synthetic.main.activity_forums.*
-
+/**
+ * Code written by Gideon Rotich
+ */
 class ForumsActivity : AppCompatActivity() {
     private var postId  = ""
     private var publisherId  = ""
@@ -32,6 +36,11 @@ class ForumsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forums)
+
+        mmoja.setOnClickListener {
+            (this as FragmentActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, discoverFragment()).commit()
+        }
 
         val intent = intent
         postId = intent.getStringExtra("postId").toString()

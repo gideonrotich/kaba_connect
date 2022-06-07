@@ -1,6 +1,7 @@
 package com.swayy.kaba_connect.Settings
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,10 @@ class aboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
+
+        optz.setOnClickListener {
+            startActivity(Intent(this,settingsActivity::class.java))
+        }
 
         fun GetAppVersion(context: Context): String{
             var version = ""

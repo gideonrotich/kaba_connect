@@ -28,6 +28,10 @@ class NewMessageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
 
+        tchop.setOnClickListener {
+            startActivity(Intent(this,LatestMessagesActivity::class.java))
+        }
+
 //        val adapter  = GroupAdapter<ViewHolder>()
 //
 //        adapter.add(UserItem())

@@ -16,7 +16,9 @@ import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_new_message.*
 import kotlinx.android.synthetic.main.activity_test.*
 import kotlinx.android.synthetic.main.user_row_new_message.view.*
-
+/**
+ * Code written by Gideon Rotich
+ */
 class testActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

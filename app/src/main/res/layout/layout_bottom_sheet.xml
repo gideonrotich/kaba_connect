@@ -222,7 +222,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="6dp"
-                        android:text="John doe"
+                        android:text=""
                         android:textColor="#000000"
                         android:textSize="24sp">
 
@@ -238,7 +238,7 @@
                         android:layout_toRightOf="@+id/mamayaoaa"
                         android:src="@drawable/verifyone"
 
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                     </ImageView>
 
@@ -264,7 +264,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chantilly, VA"
+                            android:text=""
                             android:id="@+id/webmeka"
                             android:textSize="16sp"
                             android:layout_marginStart="40dp"
@@ -295,7 +295,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chantilly, VA"
+                            android:text=""
                             android:id="@+id/webmeksa"
                             android:textSize="16sp"
                             android:layout_marginStart="44dp"

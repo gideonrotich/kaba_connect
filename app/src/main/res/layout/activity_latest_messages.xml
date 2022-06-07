@@ -15,6 +15,17 @@
         android:background="@color/white">
 
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/boli"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+
+        </ImageView>
 
         <TextView
             android:layout_width="wrap_content"

@@ -32,7 +32,9 @@ import kotlinx.android.synthetic.main.layout_bottom_sheet.*
 import kotlinx.android.synthetic.main.layout_bottom_sheet.faidooa
 import kotlinx.android.synthetic.main.layout_bottom_sheet.view.*
 import kotlinx.android.synthetic.main.user_row_new_message.view.*
-
+/**
+ * Code written by Gideon Rotich
+ */
 class CustomBottomSheetDialogFragment: BottomSheetDialogFragment() {
     private var mUser:MutableList<User>? = null
     private var userAdapter: UserAdapter? = null

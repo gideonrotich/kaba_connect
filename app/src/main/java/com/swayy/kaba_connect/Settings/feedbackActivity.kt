@@ -3,9 +3,12 @@ package com.swayy.kaba_connect.Settings
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.swayy.kaba_connect.Fragments.discoverFragment
+import com.swayy.kaba_connect.Fragments.profileFragment
 import com.swayy.kaba_connect.R
 import kotlinx.android.synthetic.main.activity_feedback.*
 
@@ -19,6 +22,11 @@ class feedbackActivity : AppCompatActivity() {
 
         btnSignInfacebookfood.setOnClickListener {
             sendFeedback()
+        }
+
+        opt.setOnClickListener {
+            (this as FragmentActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, profileFragment()).commit()
         }
 
     }

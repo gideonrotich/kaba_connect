@@ -18,10 +18,11 @@
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_baseline_arrow_back_24"
             android:layout_marginLeft="10dp"
+            android:id="@+id/tchop"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/white">
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_baseline_arrow_back_24">
 
         </ImageView>
 
@@ -35,31 +36,6 @@
             android:layout_centerInParent="true">
 
         </TextView>
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_tafuta"
-            android:layout_marginRight="46dp"
-            android:layout_marginTop="10dp"
-            app:tint="@android:color/black">
-
-        </ImageView>
-
-
-
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="26dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_menu"
-            android:layout_marginRight="6dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@android:color/white">
-
-        </ImageView>
 
 
     </RelativeLayout>

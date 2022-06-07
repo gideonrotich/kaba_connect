@@ -10,6 +10,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.swayy.kaba_connect.MainActivity
 import com.swayy.kaba_connect.R
 import kotlinx.android.synthetic.main.activity_signin.*
+import kotlinx.android.synthetic.main.activity_signin.logfacebook
+import kotlinx.android.synthetic.main.activity_signin.loggoogle
+import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SigninActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +25,15 @@ class SigninActivity : AppCompatActivity() {
         text_one_donttwo.setOnClickListener {
             startActivity(Intent(this,SignupActivity::class.java))
         }
-
+        man.setOnClickListener {
+            startActivity(Intent(this,Splash_screen_Activity::class.java))
+        }
+        loggoogle.setOnClickListener {
+            Toast.makeText(this,"Use Email to sign in",Toast.LENGTH_LONG).show()
+        }
+        logfacebook.setOnClickListener {
+            Toast.makeText(this,"Use Email to sign in",Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun loginUser() {

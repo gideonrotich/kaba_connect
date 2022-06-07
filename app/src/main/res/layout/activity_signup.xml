@@ -9,7 +9,7 @@
     tools:context=".Registration.SignupActivity">
 
     <ImageView
-        android:id="@+id/man"
+        android:id="@+id/mano"
         android:layout_width="30dp"
         android:layout_height="50dp"
         android:layout_marginLeft="12dp"
@@ -177,7 +177,7 @@
         </TextView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/loggoogle"
+            android:id="@+id/loggoogleb"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/or"
@@ -192,10 +192,10 @@
             app:cornerRadius="6dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/logfacebook"
+            android:id="@+id/logfacebookb"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@id/loggoogle"
+            android:layout_below="@id/loggoogleb"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="14dp"
             android:layout_marginRight="20dp"
@@ -230,7 +230,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/text_one_donttwo"
+                android:id="@+id/text_one_donttwob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

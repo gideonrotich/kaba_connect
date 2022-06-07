@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.swayy.kaba_connect.Fragments.profileFragment
 import com.swayy.kaba_connect.MainActivity
 import com.swayy.kaba_connect.R
 import com.swayy.kaba_connect.Registration.SigninActivity
@@ -18,6 +20,11 @@ class manageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage)
+
+        optt.setOnClickListener {
+            (this as FragmentActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, profileFragment()).commit()
+        }
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
 

@@ -20,6 +20,7 @@ import com.swayy.kaba_connect.model.Notification
 import com.swayy.kaba_connect.model.User
 import kotlinx.android.synthetic.main.fragment_discover.*
 import kotlinx.android.synthetic.main.fragment_notification.*
+import kotlinx.android.synthetic.main.fragment_notification.view.*
 
 
 class notificationFragment : Fragment() {
@@ -60,7 +61,7 @@ class notificationFragment : Fragment() {
                         Glide.with(context!!)  //2
                             .load(user!!.getImage()) //3
                             .centerCrop() //4
-                            .into(optv)
+                            .into(view!!.optv)
 
 
                     }

@@ -9,6 +9,8 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.fragment.app.FragmentActivity
+import com.swayy.kaba_connect.Fragments.profileFragment
 import com.swayy.kaba_connect.R
 import kotlinx.android.synthetic.main.activity_settings.*
 
@@ -22,6 +24,11 @@ class settingsActivity : AppCompatActivity() {
 
         smithrow.setOnClickListener {
             startActivity(Intent(this,aboutActivity::class.java))
+        }
+
+        opta.setOnClickListener {
+            (this as FragmentActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, profileFragment()).commit()
         }
 
 

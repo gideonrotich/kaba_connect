@@ -23,8 +23,10 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.swayy.kaba_connect.*
+import com.swayy.kaba_connect.Adapter.ForumAdapter
 import com.swayy.kaba_connect.Adapter.ItemAdapter
 import com.swayy.kaba_connect.Adapter.PostAdapter
+import com.swayy.kaba_connect.model.Forum
 import com.swayy.kaba_connect.model.Post
 import com.swayy.kaba_connect.model.User
 import com.swayy.kaba_connect.model.Verified
@@ -35,6 +37,7 @@ import kotlinx.android.synthetic.main.fragment_feed.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
+
 class FeedFragment : Fragment() {
     private var itemAdapter: ItemAdapter? = null
     private var itemList:MutableList<User>? = null
@@ -42,6 +45,8 @@ class FeedFragment : Fragment() {
     private var verifiedlist:MutableList<Verified>? = null
     private var postAdapter: PostAdapter? = null
     private var postList:MutableList<Post>? = null
+    private var forumAdapter: ForumAdapter?  = null
+    private var forumList:MutableList<Forum>? = null
     private var mSwipe: SwipeRefreshLayout? = null
 
     override fun onCreateView(
@@ -118,16 +123,18 @@ class FeedFragment : Fragment() {
 //            }
 //        })
 
-        setupAPICall()
+//        setupAPICall()
         userinfo()
 
 
 
-//        view.swipe_mimi.post(Runnable {
-//            view.swipe_mimi.isRefreshing=true
-//            retrievePosts()
-//            retrieveUsers()
-//        })
+        view.swipe_mimi.post(Runnable {
+            view.swipe_mimi.isRefreshing=true
+            retrievePosts()
+            retrieveUsers()
+            view?.recycler_view_posta?.visibility = View.VISIBLE
+            view?.recycler_view_feed?.visibility = View.VISIBLE
+        })
 
         view.swipe_mimi.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
             postAdapter!!.clear()
@@ -186,7 +193,7 @@ class FeedFragment : Fragment() {
                     Glide.with(context!!)  //2
                         .load(user!!.getImage()) //3
                         .centerCrop() //4
-                        .into(circ_one)
+                        .into(view!!.circ_one)
 
 
                 }

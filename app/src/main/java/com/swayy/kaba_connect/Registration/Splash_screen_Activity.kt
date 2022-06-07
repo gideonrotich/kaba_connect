@@ -3,9 +3,11 @@ package com.swayy.kaba_connect.Registration
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.swayy.kaba_connect.MainActivity
 import com.swayy.kaba_connect.R
+import kotlinx.android.synthetic.main.activity_signin.*
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class Splash_screen_Activity : AppCompatActivity() {
@@ -14,6 +16,12 @@ class Splash_screen_Activity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         log.setOnClickListener { startActivity(Intent(this, SigninActivity::class.java))
+        }
+        loggooglea.setOnClickListener {
+            Toast.makeText(this,"Use Email to sign in", Toast.LENGTH_LONG).show()
+        }
+        logfacebooka.setOnClickListener {
+            Toast.makeText(this,"Use Email to sign in", Toast.LENGTH_LONG).show()
         }
 
 

@@ -13,7 +13,9 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.swayy.kaba_connect.Adapter.NotificationAdapter
 import com.swayy.kaba_connect.model.Notification
-
+/**
+ * Code written by Gideon Rotich
+ */
 class noteActivity : AppCompatActivity() {
 
 

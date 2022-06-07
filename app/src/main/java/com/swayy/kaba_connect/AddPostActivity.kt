@@ -22,6 +22,10 @@ import kotlinx.android.synthetic.main.activity_add_post.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
 
+/**
+ * Code written by Gideon Rotich
+ */
+
 class AddPostActivity : AppCompatActivity() {
     private var checker = ""
     private var myUrl = ""
@@ -36,6 +40,10 @@ class AddPostActivity : AppCompatActivity() {
         storagePostPicRef = FirebaseStorage.getInstance().reference.child("Posts Pictures")
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
+
+        can.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
 
         save_new_post.setOnClickListener {
             if(checker == "clicked"){

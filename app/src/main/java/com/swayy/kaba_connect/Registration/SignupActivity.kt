@@ -31,8 +31,20 @@ class SignupActivity : AppCompatActivity() {
 
         btnSignup.setOnClickListener {
             CreateAccount()
-            isValid()
+//            isValid()
 
+        }
+        mano.setOnClickListener {
+            startActivity(Intent(this,SigninActivity::class.java))
+        }
+        loggoogleb.setOnClickListener {
+            Toast.makeText(this,"Use Email to sign in",Toast.LENGTH_LONG).show()
+        }
+        logfacebookb.setOnClickListener {
+            Toast.makeText(this,"Use Email to sign in",Toast.LENGTH_LONG).show()
+        }
+        text_one_donttwob.setOnClickListener {
+            startActivity(Intent(this,SigninActivity::class.java))
         }
     }
 

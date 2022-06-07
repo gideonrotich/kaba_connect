@@ -1,5 +1,6 @@
 package com.swayy.kaba_connect
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -17,7 +18,9 @@ import com.swayy.kaba_connect.Adapter.CommentsAdapter
 import com.swayy.kaba_connect.model.Comment
 import com.swayy.kaba_connect.model.User
 import kotlinx.android.synthetic.main.activity_comments.*
-
+/**
+ * Code written by Gideon Rotich
+ */
 
 class CommentsActivity : AppCompatActivity() {
     private var postId  = ""
@@ -29,6 +32,10 @@ class CommentsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comments)
+
+        seff.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
 
         val intent = intent
         postId = intent.getStringExtra("postId").toString()

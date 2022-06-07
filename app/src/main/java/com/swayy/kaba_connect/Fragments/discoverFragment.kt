@@ -1,6 +1,7 @@
 package com.swayy.kaba_connect.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,6 +23,7 @@ import com.swayy.kaba_connect.Adapter.ItemAdapter
 import com.swayy.kaba_connect.Adapter.PostAdapter
 import com.swayy.kaba_connect.CustomBottomSheetDialogFragment
 import com.swayy.kaba_connect.R
+import com.swayy.kaba_connect.Search.searchforumActivity
 import com.swayy.kaba_connect.model.Forum
 import com.swayy.kaba_connect.model.Post
 import com.swayy.kaba_connect.model.User
@@ -66,6 +68,10 @@ class discoverFragment : Fragment() {
             activity?.let { it1 -> modalbottomSheetFragment.show(it1.supportFragmentManager,modalbottomSheetFragment.tag) }
 
 
+        }
+
+        view.search_forum.setOnClickListener {
+            startActivity(Intent(context,searchforumActivity::class.java))
         }
 
 
@@ -154,7 +160,7 @@ class discoverFragment : Fragment() {
                     Glide.with(context!!)  //2
                         .load(user!!.getImage()) //3
                         .centerCrop() //4
-                        .into(profod)
+                        .into(view!!.profod)
 
 
                 }

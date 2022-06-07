@@ -72,7 +72,7 @@
     </TextView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/loggoogle"
+        android:id="@+id/loggooglea"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/or"
@@ -86,10 +86,10 @@
         app:cornerRadius="6dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/logfacebook"
+        android:id="@+id/logfacebooka"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@id/loggoogle"
+        android:layout_below="@id/loggooglea"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="14dp"
         android:layout_marginRight="20dp"

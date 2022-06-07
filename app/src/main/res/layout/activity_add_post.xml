@@ -22,15 +22,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:layout_centerVertical="true"
-                android:tint="#838383"
-                android:id="@+id/can">
+                <ImageView
+                    android:id="@+id/can"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_cancel_24"
+                    android:tint="#838383"
+                    android:focusable="true">
 
-            </ImageView>
+                </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -40,7 +42,7 @@
                     android:layout_centerVertical="true"
                     android:text="Share post"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp"></TextView>
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/save_new_post"
@@ -49,8 +51,10 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="30dp"
                     android:text="Post"
+                    android:textStyle="bold"
+                    android:clickable="true"
                     android:textColor="@color/purple_500"
-                    android:textSize="18sp"></TextView>
+                    android:textSize="20sp"/>
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>

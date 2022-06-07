@@ -52,7 +52,7 @@ class ItemAdapter(private var mContext: Context,
         holder.fullnametextview.text = user.getFullname()
         holder.mobiletextview.text = user.getMobile()
         Picasso.get().load(user.getImage()).placeholder(R.drawable.placeholderthree).into(holder.im)
-            Picasso.get().load(user.getImage()).placeholder(R.drawable.placeholderthree).into(holder.im_main)
+            Picasso.get().load(user.getImage()).into(holder.im_main)
 
 
 
@@ -60,10 +60,14 @@ class ItemAdapter(private var mContext: Context,
         if(user.getFullname() == "gideon rotich"){
             holder.dat.visibility = View.VISIBLE
         }
-        if(user.getFullname() != "gideon rotich")
+        if(user.getFullname() == "tonny bett")
         {
-            holder.dat.visibility = View.GONE
+            holder.dat.visibility = View.VISIBLE
         }
+
+
+
+
 
 
 
@@ -152,9 +156,6 @@ class ItemAdapter(private var mContext: Context,
                                             }
                                         }
                                 }
-
-
-
 
                             }
                         }
