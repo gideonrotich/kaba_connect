@@ -22,9 +22,9 @@ import kotlinx.android.synthetic.main.activity_add_post.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
 
-/**
+/***
  * Code written by Gideon Rotich
- */
+ **/
 
 class AddPostActivity : AppCompatActivity() {
     private var checker = ""

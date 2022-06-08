@@ -58,7 +58,5 @@ class ForumAdapter(private var mContext: Context,
         var mobiletextview: TextView = itemView.findViewById(R.id.us_name_course_forum)
         var im: ImageView = itemView.findViewById(R.id.pro_image_forum)
         var btnus: Button = itemView.findViewById(R.id.btnSignInusforum)
-
-
     }
 }
